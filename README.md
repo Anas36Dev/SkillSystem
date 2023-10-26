@@ -1,6 +1,7 @@
 # SkillsSystem | SkillsSystem FiveM reworked by anas36 
 
-# Le script original https://github.com/gamziboi/gamz-skillsystem
+### Le script original https://github.com/gamziboi/gamz-skillsystem
+### Fork here : https://github.com/Anas36Dev/gamz-skillsystem
 
 # [FR]
 
@@ -39,7 +40,8 @@
 ```
 
 # [GB] 
-# Original script here https://github.com/gamziboi/gamz-skillsystem
+### Original script here https://github.com/gamziboi/gamz-skillsystem
+### Fork here : https://github.com/Anas36Dev/gamz-skillsystem
 
 ### [ What is it? ]
 - A skills system based on existing GTA skills.
