@@ -1,25 +1,35 @@
 # SkillsSystem | SkillsSystem FiveM reworked by anas36 
 
-# [FR]
+### [ Qu'est-ce que c'est ? ]
+- Un système de compétences basé sur les compétences existantes de GTA.
+- Très facile à mettre en place, il suffit de vérifier la configuration.
+- Par exemple, vous pouvez ajouter ceci à votre script de gym pour devenir plus fort.
 
-1. Allez dans votre ``server.cfg`` ou ``resources.cfg`` .
-2. Ajoutez la ligne ``ensure SkillsSystem``.
-3. Insérez le ``skillssytem.sql`` dans votre Base de donnée.
-4. Le script est entièrement configurable dans le fichier ``config.lua``.
-   
-PS. Ce script peut fonctionner avec vos script de salle de sport si vous avez besoin d'aide pour le mettre en place, rejoignez mon discord.
-Ce script ne m'appartient pas mais est très peu trouvable et je vous le partage.
-   
-### Discord Support : https://discord.gg/j4ywQ5puXU
+### [ Fonctions ]
+- Affiche les compétences dans ECHAP -> Statistiques -> Skills
+- Toutes les compétences ajoutées par défaut ont une "fonction" unique, par exemple si vous courez, votre endurance augmentera avec le temps.
+- En fonction du niveau de la compétence, votre personnage sera plus performant, par exemple si votre endurance est élevée, vous pourrez courir plus longtemps sans être épuisé.
+- Toutes les ``Config.UpdateFrequency`` (secondes), le ``RemoveAmount`` actuel de la compétence sera supprimé.
 
-# [EN] 
+### [ Installation ]
+- Téléchargez la ressource et placez-la dans votre dossier de ressources.
+- Ajoutez ``ensure SkillsSytem`` à votre server.cfg
+- Ajoutez ``skillssystem.sql`` dans votre base de donnée.
 
-1. Go in your ``server.cfg`` or ``resources.cfg`` 
-2. Add line ``ensure Anas_Ammunation``
-3. Insert into your database the ``skillssystem.sql`` file.
-4. The script is fully configurable in the ``config.lua`` file.
-
-### Discord Support : https://discord.gg/j4ywQ5puXU
-
-NB. This script can work with your gym scripts if you need help setting it up, join my discord.
-I don't own this script, but it's hard to find, so I'm sharing it with you.
+### [ Comment l'utiliser ]
+- Pour ouvrir le menu, vous devez déclencher ce qui suit :
+```lua
+    exports["SkillsSystem"]:SkillMenu()
+```
+- Pour mettre à jour une compétence, il faut faire ce qui suit :
+```lua
+    exports["SkillsSystem"]:UpdateSkill(skill, amount)
+```
+  Ainsi, si vous voulez ajouter 2% à l'Endurance, vous devez faire
+```lua
+    exports["SkillsSystem"]:UpdateSkill("Stamina", 2)
+```
+- Il y a aussi un export pour obtenir la compétence actuelle si vous deviez faire quelque chose depuis un autre script
+```lua
+    exports["SkillsSystem"]:GetCurrentSkill(skill)
+```
